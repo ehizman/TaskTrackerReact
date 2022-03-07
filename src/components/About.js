@@ -1,16 +1,18 @@
-import { FaFileExcel } from "react-icons/fa";
 import { Link } from "react-router-dom";
-export const About = () => {
+const About = () => {
   return (
-    <div style={}>
+    <div style={{display: "flex", textAlign:"center"}}>
+      <div>
         <h4> Version 1.0.0  </h4>
-        <p> A Task Tracker built with React by Ehizman</p>
-        <p> An introduction to working with React. The Porject help me undertsstand how to use the React UseState hooks
-            and also the Reacr Router dom
+        <p> A Task Tracker built with React by Ehizman <br/>
+          An introduction to working with React. The Project help me undertsstand how to use the React UseState hooks
+          and also the React Router dom
         </p>
+        <br/>
         <Link to="/"> Go back </Link>
+      </div>
     </div>
-  )
+  );
 }
 
 export default About;

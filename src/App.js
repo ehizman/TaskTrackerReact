@@ -2,7 +2,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import {Tasks}  from "./components/Tasks";
 import {AddTask} from "./components/AddTask";
-import  About from "./components/About";
+import About from "./components/About";
 import { useState, useEffect } from "react";
 import { BrowserRouter as Router , Route, Routes } from "react-router-dom";
 
@@ -60,7 +60,7 @@ function App() {
 
   const addTask = async (task) => {
     // const id = Math.floor(Math.random()*10000) + 1
-    const res = await fetch ('http://localhost:5000/tasks', {
+    const res = await fetch (`http://localhost:5000/tasks`, {
       method: 'POST',
       headers: {
         'Content-type': 'application/json',
@@ -87,8 +87,8 @@ function App() {
                 )   
               }
             </>}
-         />
-          <Route path="/about" component={About} />
+          />
+          <Route path="/about" element={<About/>} />
         </Routes>
         <Footer/>
       </div>
